@@ -342,6 +342,7 @@ h2.section-title {
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
+    object-fit: scale-down;
 }
 
 .recent-additions-image figcaption {
@@ -380,4 +381,10 @@ h2.section-title {
 
 .recent-additions .flickity-slider {
     min-height: 500px;  /* Increase height */
+}
+
+.recent-additions {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
 }
