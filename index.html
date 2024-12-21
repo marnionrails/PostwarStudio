@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WYETH | Mid-Centry Modern Furniture & Home Decor</title>
+
+    <!-- Load all CSS first -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Then load fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+    <!-- Add other fonts only if you're using them -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> -->
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Load jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Then other scripts -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
 </head>
 <body class = "js-loading">
     <header class = "button-max-width-911">
@@ -40,15 +48,15 @@
                 <li><a href="#login">LOGIN</a></li>
             </ul>
         </nav>
-        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="90">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="45">
             <!-- Black background -->
             <rect x="10" y="0"width="150" height="80" fill="black"/>
             
             <!-- "STUDIO" - white bubble letters -->
-            <text x="70" y="40" 
+            <text x="70" y="35" 
             fill= "white"
             font-family="Arial Rounded MT Bold" 
-            font-size="20" 
+            font-size="18" 
             font-weight="900"
             letter-spacing="0.07em"
             style="paint-order: stroke;
@@ -57,13 +65,13 @@
                     stroke-linecap: round;
                     stroke-linejoin: round;">STUDIO</text>
             <!-- "POSTWAR" - diagonal, red text, script  -->
-            <text x="20" y="30" 
-                  transform="rotate(-20, 65, 35)" 
+            <text x="17" y="35" 
+                  transform="rotate(-20, 65, 25)" 
                   fill="#F40009"
-                  font-family="Brush Script MT, cursive" 
-                  font-size="20" 
+                  font-family="Dancing Script, cursive" 
+                  font-size="25" 
                   font-weight="bold"
-                  letter-spacing="0.05em">POSTWAR</text>
+                  letter-spacing="0.01em">POSTWAR</text>
         </svg>
             
         <!-- <h1 class = "hero">WYETH</h1> -->
@@ -115,7 +123,15 @@
         <span class = "cart-items">0</span>
     </header>
     <main>
-        <section class="carousel" data-flickity='{"cellAlign": "left", "contain": true, "wrapAround": true, "prevNextButtons": true, "pageDots": false, "draggable": true}'> 
+        <section class="carousel" data-flickity='{
+            "cellAlign": "left",
+            "contain": true,
+            "wrapAround": true,
+            "prevNextButtons": true,
+            "pageDots": false,
+            "draggable": true,
+            "adaptiveHeight": false
+        }'> 
             <figure class="carousel-cell">
                 <img src="images/carousel-image1.jpg" alt="Furniture Slide 1" style="width: 100%; object-fit: cover;">
             </figure> 
@@ -140,18 +156,23 @@
             <article class = "recent-additions-carousel" data-flickity='{"cellAlign": "left", "contain": true, "wrapAround": true, "prevNextButtons": true, "pageDots": false, "draggable": true, "freeScroll": true}'>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
+                    <figcaption>First recent addition image on the website</figcaption>
                 </figure>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image2.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
+                    <figcaption>Second recent addition image on the website</figcaption>
                 </figure>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image3.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
+                    <figcaption>Third recent addition image on the website</figcaption>
                 </figure>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image4.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
+                    <figcaption>Fourth recent addition image on the website</figcaption>
                 </figure>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image5.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
+                    <figcaption>Fifth recent addition image on the website</figcaption>
                 </figure>
             </article>
         </section>
@@ -165,45 +186,44 @@
         <p> &copy; 2024 Your Business Name</p>
     </footer>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let isX = false;
+            let searchBar = false;
+            let cartBar = false;
 
-        let isX = false;
-        let searchBar = false;
-        let cartBar = false;
+            $(window).on('load', function() {
+                $('body').addClass('loaded');
+            });
 
-        $(window).on('load', function() {
-            $('body').addClass('loaded');
+            $('button').on('click', function(){
+                if(!isX){
+                    $('.hamburger-icon').hide();
+                    $('.X-icon').show();
+                    $('.dropdown-menu').show();
+                    $('.search-bar').hide();
+                    searchBar = false;
+                    isX = true;
+                } else {
+                    $('.hamburger-icon').show();
+                    $('.X-icon').hide();
+                    $('.dropdown-menu').hide();
+                    isX = false;
+                }
+            });
+
+            $('.icon-search').on('click', function(){
+                if(!searchBar){
+                    $('.search-bar').show();
+                    $('.dropdown-menu').hide();
+                    $('.X-icon').hide();
+                    $('.hamburger-icon').show();
+                    searchBar = true;
+                } else {
+                    $('.search-bar').hide();
+                    searchBar = false;
+                }
+            });
         });
-
-        $('button').on('click', function(){
-            if(!isX){
-                $('.hamburger-icon').hide();
-                $('.X-icon').show();
-                $('.dropdown-menu').show();
-                $('.search-bar').hide();
-                searchBar = false;
-                isX = true;
-            } else {
-                $('.hamburger-icon').show();
-                $('.X-icon').hide();
-                $('.dropdown-menu').hide();
-                isX = false;
-            }
-        });
-
-        $('.icon-search').on('click', function(){
-            if(!searchBar){
-                $('.search-bar').show();
-                $('.dropdown-menu').hide();
-                $('.X-icon').hide();
-                $('.hamburger-icon').show();
-                searchBar = true;
-            } else {
-                $('.search-bar').hide();
-                searchBar = false;
-            }
-        });
-        
-
     </script>
 
 </body>
