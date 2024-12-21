@@ -140,6 +140,8 @@ html, body {
 
 .carousel {
     width: 100%;
+    min-height: 200px;  /* Ensure minimum height */
+
 }
 
 .carousel-cell {
@@ -387,4 +389,6 @@ h2.section-title {
     width: 100%;
     overflow: hidden;
     padding: 0;
+    min-height: 200px;    /* Ensure minimum height */
+
 }
