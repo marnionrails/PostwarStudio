@@ -1,3 +1,4 @@
+/* Reset and base styles first */
 html, body {
     font-family: Helvetica, sans-serif;
     margin: 0;
@@ -7,12 +8,7 @@ html, body {
     overflow-x: hidden;
 }
 
-@media screen and (min-width: 912px) {
-    .button-max-width-911 {
-        display: none;
-    }
-}
-
+/* Sticky header styles */
 .button-max-width-911 {
     display: flex;
     position: relative;
@@ -24,6 +20,26 @@ html, body {
     font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
     opacity: 1;
     border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+/* Rest of your button styles */
+.button-max-width-911 button {
+    display: flex;
+    position: absolute;
+    padding: 0;
+    left: 10px;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 912px) {
+    .button-max-width-911 {
+        display: none;
+    }
 }
 
 .button-max-width-911 button {
@@ -325,7 +341,9 @@ h2.section-title {
     font-size: 21px;
     font-weight: 300;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 12px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
 }
 
 .recent-additions-carousel {
@@ -388,7 +406,52 @@ h2.section-title {
 .recent-additions {
     width: 100%;
     overflow: hidden;
-    padding: 0;
     min-height: 200px;    /* Ensure minimum height */
 
 }
+
+.categories {
+    margin-top: -70px;
+}
+
+/* Categories grid layout */
+.categories article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    gap: 20px;  /* Space between items */
+    padding: 20px;  /* Padding around grid */
+}
+
+.categories-image {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.categories-image img {
+    width: 100%;
+    aspect-ratio: 1/1;  /* Square images */
+    object-fit: cover;
+    display: block;
+}
+
+.categories-image figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+main {
+    margin-top: 4px;
+    position: relative;
+}
+/* .categories-heading {
+    padding-bottom: 10px;
+    margin: 0;
+    padding: 0;
+} */
