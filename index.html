@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WYETH | Mid-Centry Modern Furniture & Home Decor</title>
     <!-- Load jQuery first -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
     <!-- Load all CSS first -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
@@ -28,6 +28,11 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 </head>
 <body class = "js-loading">
+    <noscript>
+        <div style="text-align: center; padding: 20px; background: rgb(242, 242, 242); color: rgb(107, 107, 107);">
+            <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser settings to continue.</p>
+        </div>
+    </noscript>
     <header class = "button-max-width-911">
         <button>
             <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 40" width="50" height="40">
@@ -236,41 +241,42 @@
             let searchBar = false;
             let cartBar = false;
 
-            $(window).on('load', function() {
-                $('body').addClass('loaded');
+            window.addEventListener('load', function() {
+                document.body.classList.add('loaded');
             });
 
-            $('button').on('click', function(){
+            document.querySelector('button').addEventListener('click', function(){
                 if(!isX){
-                    $('.hamburger-icon').hide();
-                    $('.X-icon').show();
-                    $('.dropdown-menu').show();
-                    $('.search-bar').hide();
+                    document.querySelector('.hamburger-icon').style.display = 'none';
+                    document.querySelector('.X-icon').style.display = 'block';
+                    document.querySelector('.dropdown-menu').style.display = 'block';
+                    document.querySelector('.search-bar').style.display = 'none';
                     searchBar = false;
                     isX = true;
                 } else {
-                    $('.hamburger-icon').show();
-                    $('.X-icon').hide();
-                    $('.dropdown-menu').hide();
+                    document.querySelector('.hamburger-icon').style.display = 'block';
+                    document.querySelector('.X-icon').style.display = 'none';
+                    document.querySelector('.dropdown-menu').style.display = 'none';
                     isX = false;
                 }
             });
 
-            $('.icon-search').on('click', function(){
+            document.querySelector('.icon-search').addEventListener('click', function(){
                 if(!searchBar){
-                    $('.search-bar').show();
-                    $('.dropdown-menu').hide();
-                    $('.X-icon').hide();
-                    $('.hamburger-icon').show();
+                    document.querySelector('.search-bar').style.display = 'block';
+                    document.querySelector('.dropdown-menu').style.display ='none';
+                    document.querySelector('.X-icon').style.display = 'none';
+                    document.querySelector('.hamburger-icon').style.display = 'block';
                     searchBar = true;
-                } else {
-                    $('.search-bar').hide();
+                } else {       
+                    document.querySelector('.search-bar').style.display = 'none';
                     searchBar = false;
                 }
+                console.log('Search bar is ' + searchBar);
             });
 
                         // Add this: Stop propagation on Flickity buttons
-            $('.flickity-prev-next-button').on('click', function(e) {
+            document.querySelector('.flickity-prev-next-button').addEventListener('click', function(e) {
                 e.stopPropagation();  // Stop event from bubbling up
             });
         });

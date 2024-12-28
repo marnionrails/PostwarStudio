@@ -170,6 +170,7 @@ html, body {
     width: 100%;
     height: auto;
     display: block;
+    height: 260.641px;
 }
 
 .carousel-container figure {
@@ -366,7 +367,7 @@ h2.section-title {
 }
 
 .recent-additions-image figcaption {
-    position: absolute;
+    position: static;
     bottom: -60px;
     left: 0;
     width: 100%;
@@ -433,16 +434,18 @@ h2.section-title {
     aspect-ratio: 1/1;  /* Square images */
     object-fit: cover;
     display: block;
+    position: relative;
+    z-index: 0;
 }
 
 .categories-image figcaption {
     position: absolute;
-    bottom: 10px;
+    padding-top: 10px;
     left: 0;
     width: 100%;
     text-align: center;
-    color: white;
-    padding: 10px;
+    /* padding-top: 15%; */
+    z-index: 1;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
 }
 
