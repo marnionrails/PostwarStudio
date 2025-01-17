@@ -437,11 +437,10 @@ h2.section-title {
 
 .categories-image figcaption {
     position: absolute;
-    bottom: 10px;
+    bottom: -1.5em;
     left: 0;
     width: 100%;
     text-align: center;
-    color: white;
     padding: 10px;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
 }

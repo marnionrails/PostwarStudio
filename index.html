@@ -50,11 +50,9 @@
                 <li><a href="#login">LOGIN</a></li>
             </ul>
         </nav>
-        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 75" width="180" height="45">
-            <!-- Black background -->
+        <!-- <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 75" width="180" height="45">
             <rect x="10" y="0"width="190" height="75" fill="#000000"/>
             
-            <!-- "STUDIO" - white bubble letters -->
             <text x="120" y="55" 
             text-anchor="middle"
             fill= "white"
@@ -69,7 +67,6 @@
                     stroke-linejoin: miter;
                     stroke-miterlimit: 3;
                     ">STUDIO</text>
-            <!-- "POSTWAR" - diagonal, red text, script  -->
             <text x="26" y="50" 
                   transform="rotate(-26, 50, 30)" 
                   text-decoration="underline"
@@ -79,6 +76,22 @@
                   font-weight="800"
                   stroke-linecap: round
                   letter-spacing="0.01em">POSTWAR</text>
+        </svg> -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" width="200" height="100">
+            <!-- "POSTWAR" - red script text -->
+            <text x="10" y="38"
+            transform="rotate(-26, 50, 30)" 
+            fill="#E3000B" font-family="'Dancing Script', cursive" font-size="40" font-weight="bold">
+                Postwar
+            </text>
+            <!-- "STUDIO" - black bold text with a vertical line -->
+            <text x="10" y="70" fill="#000000" font-family="'Arial Rounded MT Bold', sans-serif" font-size="40" font-weight="bold">
+                STUD O
+            </text>
+            <!-- Vertical line -->
+            <circle cx="10" cy="10" r="9" stroke="000000" fill="none" vector-effect="non-scaling-stroke"></circle>
+            <line x1="150" y1="20" x2="150" y2="100" stroke="#000000" stroke-width="10"/>
+            <line x1="155" y1="20" x2="155" y2="100" stroke="#7D7D7D" stroke-width="5"/>
         </svg>
             
         <!-- <h1 class = "hero">WYETH</h1> -->
@@ -132,7 +145,6 @@
     <main>
         <section class="carousel" data-flickity='{
             "cellAlign": "left",
-            "contain": true,
             "wrapAround": true,
             "prevNextButtons": true,
             "pageDots": false,
@@ -162,7 +174,7 @@
         </section>
         <section class = "recent-additions">
             <h2 class = "section-title archive-heading">ARCHIVE</h2>
-            <article class = "recent-additions-carousel" data-flickity='{"cellAlign": "center", "contain": true, "wrapAround": true, "prevNextButtons": true, "pageDots": false, "draggable": true, "freeScroll": true, "touchVerticalScroll": true, "dragThreshold": 30}'>
+            <article class = "recent-additions-carousel" data-flickity='{"cellAlign": "center", "wrapAround": true, "prevNextButtons": true, "pageDots": false, "draggable": true, "freeScroll": true, "touchVerticalScroll": true, "dragThreshold": 30}'>
                 <figure class = "recent-additions-image">
                     <img src="images/recentaddition-image.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
                     <figcaption>First recent addition image on the website</figcaption>
@@ -216,6 +228,7 @@
                     <img src="images/tables.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
                     <figcaption>TABLES</figcaption>
                 </figure>
+                <figure class = "categories-image">
                     <img src="images/tabletop.jpg" alt="Recent Additions Image" style="width: 100%; object-fit: cover;">
                     <figcaption>TABLETOP</figcaption>
                 </figure>
@@ -234,44 +247,46 @@
         document.addEventListener('DOMContentLoaded', function() {
             let isX = false;
             let searchBar = false;
-            let cartBar = false;
 
-            $(window).on('load', function() {
-                $('body').addClass('loaded');
+            window.addEventListener('load', function() {
+                document.querySelector('body').classList.add('loaded');
             });
 
-            $('button').on('click', function(){
-                if(!isX){
-                    $('.hamburger-icon').hide();
-                    $('.X-icon').show();
-                    $('.dropdown-menu').show();
-                    $('.search-bar').hide();
-                    searchBar = false;
-                    isX = true;
-                } else {
-                    $('.hamburger-icon').show();
-                    $('.X-icon').hide();
-                    $('.dropdown-menu').hide();
-                    isX = false;
-                }
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function() {
+                    if (!isX) {
+                        document.querySelector('.hamburger-icon').style.display = 'none';
+                        document.querySelector('.X-icon').style.display = 'block';
+                        document.querySelector('.dropdown-menu').style.display = 'block';
+                        document.querySelector('.search-bar').style.display = 'none';
+                        searchBar = false;
+                        isX = true;
+                    } else {
+                        document.querySelector('.hamburger-icon').style.display = 'block';
+                        document.querySelector('.X-icon').style.display = 'none';
+                        document.querySelector('.dropdown-menu').style.display = 'none';
+                        isX = false;
+                    }
+                });
             });
 
-            $('.icon-search').on('click', function(){
-                if(!searchBar){
-                    $('.search-bar').show();
-                    $('.dropdown-menu').hide();
-                    $('.X-icon').hide();
-                    $('.hamburger-icon').show();
+            document.querySelector('.icon-search').addEventListener('click', function() {
+                if (!searchBar) {
+                    document.querySelector('.search-bar').style.display = 'block';
+                    document.querySelector('.dropdown-menu').style.display = 'none';
+                    document.querySelector('.X-icon').style.display = 'none';
+                    document.querySelector('.hamburger-icon').style.display = 'block';
                     searchBar = true;
                 } else {
-                    $('.search-bar').hide();
+                    document.querySelector('.search-bar').style.display = 'none';
                     searchBar = false;
                 }
             });
 
-                        // Add this: Stop propagation on Flickity buttons
-            $('.flickity-prev-next-button').on('click', function(e) {
-                e.stopPropagation();  // Stop event from bubbling up
+            document.querySelectorAll('.flickity-button-icon').forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
             });
         });
     </script>
