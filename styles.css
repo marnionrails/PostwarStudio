@@ -20,6 +20,7 @@ html, body {
     font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
     opacity: 1;
     border-bottom: 1px solid rgb(242, 242, 242);
+    overflow-x: hidden;
 }
 
 /* Rest of your button styles */
