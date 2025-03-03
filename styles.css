@@ -6,12 +6,15 @@ html, body {
     line-height: 1.6;
     color: rgb(107, 107, 107);
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Sticky header styles */
 .button-max-width-911 {
     display: flex;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
     align-items: center;
     justify-content: center;
     padding: 12px;
