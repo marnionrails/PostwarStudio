@@ -1,38 +1,34 @@
-/* Reset and base styles first */
-html, body {
+body, html {
     font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: rgb(107, 107, 107);
+    color: #6b6b6b;
     overflow-x: hidden;
     max-width: 100%;
 }
 
-/* Sticky header styles */
 .button-max-width-911 {
     display: flex;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     padding: 12px;
-    background: rgb(242, 242, 242);
-    color: rgb(107, 107, 107);
+    background: #f2f2f2;
+    color: #6b6b6b;
     font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
     opacity: 1;
-    border-bottom: 1px solid rgb(242, 242, 242);
-    /* overflow-x: hidden; */
+    border-bottom: 1px solid #f2f2f2;
 }
 
-/* Rest of your button styles */
 .button-max-width-911 button {
     display: flex;
     position: absolute;
     padding: 0;
     left: 10px;
-    outline: none;
+    outline: 0;
     border: none;
     background: none;
     cursor: pointer;
@@ -51,7 +47,7 @@ html, body {
     position: absolute;
     padding: 0;
     left: 10px;
-    outline: none;
+    outline: 0;
     border: none;
     background: none;
     cursor: pointer;
@@ -72,7 +68,6 @@ html, body {
     stroke-width: 1;
 }
 
-/* Optional: Add hover effect */
 .button-max-width-911 button:hover .hamburger-icon line {
     stroke: rgba(107, 107, 107, 0.7);
 }
@@ -83,13 +78,10 @@ html, body {
     font-size: 13px;
     left: 80%;
     top: 35%;
-    /* transform: translateY(-50%); */
-    /* bottom: 3px; */
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    color: rgb(107, 107, 107);
-
+    color: #6b6b6b;
 }
 
 .button-max-width-911 h1 {
@@ -100,8 +92,6 @@ html, body {
     letter-spacing: 0.4em;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
     text-transform: uppercase;
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
 }
 
 .icon-search {
@@ -115,15 +105,16 @@ html, body {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
+
 .search-bar {
     display: none;
     position: absolute;
     top: 100%;
     padding-top: 15px;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin: 0 auto;
-    background: rgb(242, 242, 242);
+    background: #f2f2f2;
     z-index: 1000;
     border-bottom: 1px solid rgba(107, 107, 107, 0.2);
 }
@@ -133,16 +124,16 @@ html, body {
     padding: 10px 20px 5px 10px;
     margin: 0 20px 20px 20px;
     border: none;
-    border-bottom: 1px solid rgb(107, 107, 107);
-    background: transparent;
+    border-bottom: 1px solid #6b6b6b;
+    background: none;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
-    color: rgb(107, 107, 107);
+    color: #6b6b6b;
     outline: none;
 }
 
 .search-input::placeholder {
-    color: rgb(107, 107, 107);
+    color: #6b6b6b;
     letter-spacing: 0.05em;
 }
 
@@ -160,8 +151,7 @@ html, body {
 
 .carousel {
     width: 100%;
-    min-height: 200px;  /* Ensure minimum height */
-
+    min-height: 200px;
 }
 
 .carousel-cell {
@@ -176,28 +166,14 @@ html, body {
     display: block;
 }
 
-.carousel-container figure {
-    margin: 0;
-    padding: 0;
-}
-
-.flickity-page-dots {
-    display: none;
-}
-
-section.hero {
-    display: inline;
-}
-/* Move media query to the end */
 @media screen and (min-width: 912px) {
     .button-max-width-911,
+    .button-max-width-911 .menu-title,
     .button-max-width-911 button,
-    .button-max-width-911 button span,
-    .button-max-width-911 .menu-title {
-        display: none !important; /* Added !important to ensure it overrides other display rules */
+    .button-max-width-911 button span {
+        display: none !important;
     }
 }
-
 
 footer {
     background: #333;
@@ -205,7 +181,6 @@ footer {
     text-align: center;
     padding: 10px;
 }
-
 
 @font-face {
     font-family: 'Helvetica Neue';
@@ -230,15 +205,6 @@ footer {
     user-select: none;
 }
 
-/* .button-max-width-911::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    border-top: 1px dashed red;
-} */
-
 .js-loading {
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -258,42 +224,21 @@ footer {
     font-size: 12px;
 }
 
-
-
-/* More specific than just .flickity-button */
 .carousel .flickity-button {
-    background: transparent;  /* This should now override the default */
+    background: none;
     border: none;
 }
 
-/* More specific than just .flickity-prev-next-button */
-.carousel .flickity-prev-next-button {
-    width: 30px;  /* This should now override the default 44px */
-    height: 30px;
-    color: rgb(107, 107, 107);
-}
-
-/* Position the previous button further left */
-.flickity-prev-next-button.previous {
-    left: -5px;  /* Increase this value to move it more left */
-}
-
-/* Position the next button further right */
-.flickity-prev-next-button.next {
-    right: -5px;  /* Increase this value to move it more right */
-}
-
-/* Make the arrow icons thinner */
 .carousel .flickity-button-icon {
-    stroke-width: 1;  /* Decrease this value to make arrows thinner */
-    fill: rgb(107, 107, 107);
+    stroke-width: 1;
+    fill: #6b6b6b;
 }
 
 h2.section-title {
     text-align: center;
     font-size: 21px;
     font-weight: 300;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0;
     margin: 0;
     z-index: 2;
@@ -323,8 +268,8 @@ h2.section-title {
     bottom: -60px;
     left: 0;
     width: 100%;
-    background: transparent;
-    color: rgb(107, 107, 107);
+    background: none;
+    color: #6b6b6b;
     padding: 10px;
     z-index: 100;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
@@ -335,44 +280,33 @@ h2.section-title {
     margin: 0 auto;
     height: 45px;
     width: 200px;
-    background: transparent;  /* Remove any background color */
-}
-
-.flickity-slider {
-    min-height: 100px;
+    background: none;
 }
 
 .flickity-viewport {
     overflow: visible !important;
 }
 
-/* Target specifically the recent additions carousel */
 .recent-additions .flickity-viewport {
     overflow: visible !important;
-    padding-bottom: 100px;  /* Add space for captions */
-}
-
-.recent-additions .flickity-slider {
-    min-height: 500px;  /* Increase height */
+    padding-bottom: 100px;
 }
 
 .recent-additions {
     width: 100%;
     overflow: hidden;
-    min-height: 200px;    /* Ensure minimum height */
-
+    min-height: 200px;
 }
 
 .categories {
     margin-top: -70px;
 }
 
-/* Categories grid layout */
 .categories article {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Two columns */
-    gap: 20px;  /* Space between items */
-    padding: 20px;  /* Padding around grid */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
 .categories-image {
@@ -383,7 +317,7 @@ h2.section-title {
 
 .categories-image img {
     width: 100%;
-    aspect-ratio: 1/1;  /* Square images */
+    aspect-ratio: 1/1;
     object-fit: cover;
     display: block;
 }
@@ -402,80 +336,14 @@ main {
     margin-top: 4px;
     position: relative;
 }
-/* .categories-heading {
-    padding-bottom: 10px;
-    margin: 0;
-    padding: 0;
-} */
-
-
-
-
-
-/* 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgb(242, 242, 242);
-    z-index: 1000;
-}
-
-.dropdown-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: block;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.dropdown-menu ul li {
-    margin-right: 15px;
-}
-
-.dropdown-menu ul li a {
-    color: rgb(107, 107, 107);
-    text-decoration: none;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-}
-
 
 .dropdown-menu {
     display: none;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    font-size: 12px;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    color: rgb(107, 107, 107);
-    padding-left: 15px;
-    padding-top: 5px;
-    border-top: 1px solid rgba(107, 107, 107, 0.1); 
-} */
-/* 
-.dropdown-menu-ul li {
-    list-style-type: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    color: rgb(83, 83, 83);
-    letter-spacing: 0.07em;
-    font-weight: 550;
-} */
-
-/* .dropdown-menu-ul li:nth-last-child(1) {
-    padding-bottom: 25px;
-} */
-
-
-.dropdown-menu {
-    display: none; /* Initial state */
-    position: absolute; /* Position it relative to the header */
-    top: 100%; /* Position it directly below the header */
+    position: absolute;
+    top: 100%;
     left: 6;
-    width: 100%; /* Full width of the header */
-    background: rgb(242, 242, 242);
+    width: 100%;
+    background: #f2f2f2;
     z-index: 1000;
 }
 
@@ -484,13 +352,13 @@ main {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 10px;
-    color: rgb(83, 83, 83);
+    color: #535353;
     letter-spacing: 0.07em;
     font-weight: 550;
 }
 
 .dropdown-menu ul li a {
-    color: rgb(107, 107, 107);
+    color: #6b6b6b;
     text-decoration: none;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
 }
