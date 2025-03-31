@@ -1,62 +1,86 @@
+* {
+    box-sizing: border-box;
+}
 
 body, html {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
     color: #6b6b6b;
-    overflow-x: hidden;
+    font-family: Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
     max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.archive {
+    margin-top: 5%;
+    min-height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.archive-carousel {
+    padding: 0;
+    position: relative;
+}
+
+.archive-image {
+    position: relative;
+    width: 72.5%;
+}
+
+.archive-image figcaption {
+    background: none;
+    color: #6b6b6b;
+    font-family: Gill Sans Nova, sans-serif;
+    left: 0;
+    letter-spacing: 0;
+    padding-top: 15px;
+    position: absolute;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 100;
+}
+
+.archive-image img {
+    aspect-ratio: 4/3;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-fit: scale-down;
+    width: 100%;
 }
 
 .button-max-width-911 {
+    align-items: center;
+    background: #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    color: #6b6b6b;
     display: flex;
+    font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
+    justify-content: center;
+    opacity: 1;
+    padding: 12px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    background: #f2f2f2;
-    color: #6b6b6b;
-    font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
-    opacity: 1;
-    border-bottom: 1px solid #f2f2f2;
 }
 
 .button-max-width-911 button {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    position: absolute;
-    padding: 0;
+    height: 40px;
     left: 10px;
     outline: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@media screen and (min-width: 912px) {
-    .button-max-width-911 {
-        display: none;
-    }
-}
-
-.button-max-width-911 button {
-    display: flex;
-    position: absolute;
     padding: 0;
-    left: 10px;
-    outline: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    height: 40px;
 }
 
 .button-max-width-911 button .hamburger-icon {
@@ -74,99 +98,171 @@ body, html {
 }
 
 .button-max-width-911 .menu-title {
+    color: #6b6b6b;
     display: flex;
-    position: absolute;
+    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 13px;
     left: 80%;
-    top: 35%;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    color: #6b6b6b;
+    position: absolute;
+    text-transform: uppercase;
+    top: 35%;
 }
 
 .button-max-width-911 h1 {
-    margin: 0;
-    text-align: center;
+    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 200;
     letter-spacing: 0.4em;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    text-align: center;
     text-transform: uppercase;
 }
 
-
-
-.search-input::placeholder {
-    color: #6b6b6b;
-    letter-spacing: 0.05em;
-}
-
-.search-bar .icon-search-confirm {
-    position: absolute;
-    right: 30px;
-    bottom: 10px;
-    top: 55%;
-    transform: translateY(-80%);
-    cursor: pointer;
-    stroke-width: 1.2;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    display: none;
-}
-
 .carousel {
-    width: 100%;
     min-height: 200px;
+    width: 100%;
 }
 
 .carousel-cell {
-    width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .carousel-cell img {
-    width: 100%;
-    height: auto;
     display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
 }
 
-@media screen and (min-width: 912px) {
-    .button-max-width-911,
-    .button-max-width-911 .menu-title,
-    .button-max-width-911 button,
-    .button-max-width-911 button span {
-        display: none !important;
-    }
+.carousel .flickity-button {
+    background: none;
+    border: none;
+}
+
+.carousel .flickity-button-icon {
+    stroke-width: 1;
+    fill: #6b6b6b;
+}
+
+.categories {
+    margin-top: 5%;
+}
+
+.categories article {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+}
+
+.categories-image {
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+.categories-image figcaption {
+    bottom: -1.5em;
+    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.categories-image img {
+    aspect-ratio: 1/1;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.cart-items {
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 58%;
+    transform: translateY(-50%);
+}
+
+.dropdown-menu {
+    background: #f2f2f2;
+    display: none;
+    left: 6;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.dropdown-menu-ul li {
+    color: #535353;
+    font-weight: 550;
+    letter-spacing: 0.07em;
+    list-style-type: none;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-top: 15px;
+}
+
+.dropdown-menu ul li a {
+    color: #6b6b6b;
+    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 footer {
     background: #333;
     color: #fff;
+    padding: 0px;
     text-align: center;
-    padding: 10px;
 }
 
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.eot');
-    src: url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.eot?#iefix') format('embedded-opentype'),
-         url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.woff2') format('woff2'),
-         url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.woff') format('woff'),
-         url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.ttf') format('truetype'),
-         url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.svg#Helvetica Neue LT Std 25 Ultra Light') format('svg');
+.flickity-viewport {
+    overflow: visible !important;
+}
+
+.archive .flickity-viewport {
+    overflow: visible !important;
+    padding-bottom: 100px;
+}
+
+h2.section-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 2;
 }
 
 .icon-cart {
-    position: absolute;
-    display: none;
-    right: 18px;
-    top: calc(50% + 2px);
-    width: 20px;
-    transform: translateY(-50%);
     cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 18px;
     stroke-width: 1.2;
+    top: calc(50% + 2px);
+    transform: translateY(-50%);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    width: 20px;
+}
+
+.icon-search {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 60px;
+    stroke-width: 1.2;
+    top: calc(50% + 2px);
+    transform: translateY(-50%);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
@@ -182,198 +278,97 @@ footer {
     visibility: visible;
 }
 
-.cart-items {
-    position: absolute;
-    right: 10px;
-    top: 58%;
-    transform: translateY(-50%);
-    font-size: 12px;
-    display: none;
-}
-
-.carousel .flickity-button {
+.postwar-logo-max-width-911 {
     background: none;
-    border: none;
-}
-
-.carousel .flickity-button-icon {
-    stroke-width: 1;
-    fill: #6b6b6b;
-}
-
-h2.section-title {
-    text-align: center;
-    font-size: 21px;
-    font-weight: 300;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
-}
-
-.archive-carousel {
-    padding: 0;
-    position: relative;
-}
-
-.archive-image {
-    width: 72.5%;
-    position: relative;
-}
-
-.archive-image img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
     display: block;
-    object-fit: scale-down;
+    height: 50px;
+    margin: 0 auto;
+    width: 100px;
 }
 
-.archive-image figcaption {
-    position: absolute;
-    /* bottom: -60px; */
-    left: 0;
-    width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    text-rendering: optimizeLegibility;
+.postwar-logo-min-width-912 {
     background: none;
-    color: #6b6b6b;
-    padding-top: 15px;
-    z-index: 100;
-    font-family: Gill Sans Nova, sans-serif;
+    display: none;
+    height: 100px;
+    margin: 0 auto;
+    width: 200px;
 }
 
 .no-uppercase {
     text-transform: none;
 }
 
-.logo {
-    display: block;
-    margin: 0 auto;
-    height: 45px;
-    width: 200px;
-    background: none;
-}
-
-.flickity-viewport {
-    overflow: visible !important;
-}
-
-.archive .flickity-viewport {
-    overflow: visible !important;
-    padding-bottom: 100px;
-}
-
-.archive {
-    width: 100%;
-    overflow: hidden;
-    min-height: 200px;
-    margin-top: 5%;
-}
-
-.categories {
-    margin-top: 5%;
-}
-
-.categories article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0px;
-}
-
-.categories-image {
-    width: 100%;
-    margin: 0;
-    position: relative;
-}
-
-.categories-image img {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    display: block;
-}
-
-.categories-image figcaption {
-    position: absolute;
-    bottom: -1.5em;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-main {
-    margin-top: 4px;
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 6;
-    width: 100%;
+.search-bar {
     background: #f2f2f2;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
+    display: none;
+    left: 0;
+    margin: 0 auto;
+    padding-top: 15px;
+    position: absolute;
+    right: 0;
+    top: 100%;
     z-index: 1000;
 }
 
-.dropdown-menu-ul li {
-    list-style-type: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    color: #535353;
-    letter-spacing: 0.07em;
-    font-weight: 550;
-}
-
-.dropdown-menu ul li a {
+.search-bar input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #6b6b6b;
     color: #6b6b6b;
-    text-decoration: none;
+    display: none;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0 20px 20px 20px;
+    outline: 0;
+    padding: 10px 20px 5px 10px;
+    width: calc(100% - 40px);
 }
 
-
-/* Styles currently not in use */
-.icon-search {
-    position: absolute;
-    display: none;
-    right: 60px;
-    top: calc(50% + 2px);
-    transform: translateY(-50%);
+.search-bar .icon-search-confirm {
+    bottom: 10px;
     cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 30px;
     stroke-width: 1.2;
+    top: 55%;
+    transform: translateY(-80%);
     -webkit-tap-highlight-color: transparent;
     user-select: none;
 }
 
-.search-bar {
+.search-input::placeholder {
+    color: #6b6b6b;
     display: none;
-    position: absolute;
-    top: 100%;
-    padding-top: 15px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background: #f2f2f2;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
+    letter-spacing: 0.05em;
 }
 
-.search-bar input {
-    width: calc(100% - 40px);
-    padding: 10px 20px 5px 10px;
-    margin: 0 20px 20px 20px;
-    border: none;
-    border-bottom: 1px solid #6b6b6b;
-    background: none;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14px;
-    color: #6b6b6b;
-    outline: none;
-    display: none;
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.eot);
+    src: url(https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.eot?#iefix) format('embedded-opentype'),
+         url(https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.woff2) format('woff2'),
+         url(https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.woff) format('woff'),
+         url(https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.ttf) format('truetype'),
+         url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.svg#Helvetica Neue LT Std 25 Ultra Light') format('svg');
 }
+
+@media screen and (min-width: 912px) {
+    .button-max-width-911,
+    .button-max-width-911 .menu-title,
+    .button-max-width-911 button,
+    .button-max-width-911 button span {
+        display: none !important;
+    }
+
+    .postwar-logo-min-width-912 {
+        display: block;
+    }
+
+
+
+}
+
+
+
