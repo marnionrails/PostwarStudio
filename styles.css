@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+* {/* box-sizing: border-box; */}
 
 body, html {
     color: #6b6b6b;
@@ -14,7 +12,7 @@ body, html {
 
 .archive {
     margin-top: 5%;
-    min-height: 200px;
+    min-height: 320px;
     overflow: hidden;
     width: 100%;
 }
@@ -46,7 +44,7 @@ body, html {
 .archive-image img {
     aspect-ratio: 4/3;
     display: block;
-    height: auto;
+    height: 400px;
     object-fit: cover;
     object-fit: scale-down;
     width: 100%;
@@ -148,37 +146,39 @@ body, html {
 }
 
 .categories {
+    margin: 20px;
     margin-top: 5%;
 }
 
 .categories article {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     padding: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .categories-image {
     margin: 0;
     position: relative;
-    width: 100%;
+    width: 33%;
 }
 
 .categories-image figcaption {
-    bottom: -1.5em;
     font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    left: 0;
+    /* left: 0; */
     padding: 10px;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .categories-image img {
-    aspect-ratio: 1/1;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
+    max-height: 300px;
 }
 
 .cart-items {
@@ -219,10 +219,17 @@ body, html {
 footer {
     background: #333;
     color: #fff;
-    padding: 0px;
+    padding: 5px;
     text-align: center;
 }
+footer p { margin: 10px 0; vertical-align: middle; }
+footer p a { display: inline-block; width: auto; vertical-align: middle; margin-left: 5px; }
+footer p a img { vertical-align: middle; }
 
+footer ul { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0; padding: 0; }
+footer ul li { list-style: none; }
+footer ul li a { display: block; }
+footer ul li img { max-width: 25px; }
 .flickity-viewport {
     overflow: visible !important;
 }
@@ -283,7 +290,7 @@ h2.section-title {
     display: block;
     height: 50px;
     margin: 0 auto;
-    width: 100px;
+    /* width: 100px; */
 }
 
 .postwar-logo-min-width-912 {
@@ -354,7 +361,7 @@ h2.section-title {
          url('https://db.onlinewebfonts.com/t/0b51833ff62e4af8acb5fd3e2bf59e8f.svg#Helvetica Neue LT Std 25 Ultra Light') format('svg');
 }
 
-@media screen and (min-width: 912px) {
+@media only screen and (min-width: 992px) {
     .button-max-width-911,
     .button-max-width-911 .menu-title,
     .button-max-width-911 button,
@@ -366,9 +373,39 @@ h2.section-title {
         display: block;
     }
 
+}
 
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .categories-image { width: 50%; }
 
 }
 
+@media screen and (max-width: 767px) {
+    .categories-image { width: 100%; }
+    .archive-image figcaption { text-align:center; }
 
+}
 
+@media (max-width: 640px) {
+    /*.button-max-width-911,
+    .button-max-width-911 .menu-title,
+    .button-max-width-911 button,
+    .button-max-width-911 button span {
+        display: none !important;
+    }
+
+    .postwar-logo-min-width-912 {
+        display: block;
+    }*/
+    .archive {
+        min-height: 360px;
+    }
+
+    .archive-image img {
+        height: 160px;
+    }
+    .archive-image figcaption {
+        font-size: 12px !important;
+    }
+
+}
