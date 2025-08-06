@@ -1,7 +1,7 @@
 * {/* box-sizing: border-box; */}
 
 body, html {
-    color: #6b6b6b;
+    color: #333;
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -29,10 +29,10 @@ body, html {
 
 .archive-image figcaption {
     background: none;
-    color: #6b6b6b;
-    font-family: Gill Sans Nova, sans-serif;
+    color: #333;
+    font-family: Futura PT, sans-serif;
     left: 0;
-    letter-spacing: 0;
+    letter-spacing: 0.05em;
     padding-top: 15px;
     position: absolute;
     text-rendering: optimizeLegibility;
@@ -52,9 +52,9 @@ body, html {
 
 .button-max-width-911 {
     align-items: center;
-    background: #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-    color: #6b6b6b;
+    background: #f5ecec;
+    border-bottom: 1px solid #f5ecec;
+    color: #333;
     display: flex;
     font-family: Inter, "Helvetica Neue", Helvetica, sans-serif;
     justify-content: center;
@@ -63,48 +63,6 @@ body, html {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.button-max-width-911 button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    height: 40px;
-    left: 10px;
-    outline: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-}
-
-.button-max-width-911 button .hamburger-icon {
-    display: block;
-    stroke-width: 1;
-}
-
-.button-max-width-911 button .X-icon {
-    display: none;
-    stroke-width: 1;
-}
-
-.button-max-width-911 button:hover .hamburger-icon line {
-    stroke: rgba(107, 107, 107, 0.7);
-}
-
-.button-max-width-911 .menu-title {
-    color: #6b6b6b;
-    display: flex;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 13px;
-    left: 80%;
-    letter-spacing: 0.05em;
-    position: absolute;
-    text-transform: uppercase;
-    top: 35%;
 }
 
 .button-max-width-911 h1 {
@@ -142,78 +100,7 @@ body, html {
 
 .carousel .flickity-button-icon {
     stroke-width: 1;
-    fill: #6b6b6b;
-}
-
-.categories {
-    margin: 20px;
-    margin-top: 5%;
-}
-
-.categories article {
-    display: flex;
-    padding: 0;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.categories-image {
-    margin: 0;
-    position: relative;
-    width: 33%;
-}
-
-.categories-image figcaption {
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    /* left: 0; */
-    padding: 10px;
-    /* position: absolute; */
-    text-align: center;
-    /* width: 100%; */
-}
-
-.categories-image img {
-    display: block;
-    object-fit: contain;
-    width: 100%;
-    max-height: 300px;
-}
-
-.cart-items {
-    display: none;
-    font-size: 12px;
-    position: absolute;
-    right: 10px;
-    top: 58%;
-    transform: translateY(-50%);
-}
-
-.dropdown-menu {
-    background: #f2f2f2;
-    display: none;
-    left: 6;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    z-index: 1000;
-}
-
-.dropdown-menu-ul li {
-    color: #535353;
-    font-weight: 550;
-    letter-spacing: 0.07em;
-    list-style-type: none;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    padding-top: 15px;
-}
-
-.dropdown-menu ul li a {
-    color: #6b6b6b;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    text-decoration: none;
+    fill: #333;
 }
 
 footer {
@@ -240,38 +127,13 @@ footer ul li img { max-width: 25px; }
 }
 
 h2.section-title {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 21px;
+    font-family: 'Futura PT', sans-serif;
+    font-size: 23px;
     font-weight: 300;
     margin: 0;
     padding: 0;
     text-align: center;
     z-index: 2;
-}
-
-.icon-cart {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 18px;
-    stroke-width: 1.2;
-    top: calc(50% + 2px);
-    transform: translateY(-50%);
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-    width: 20px;
-}
-
-.icon-search {
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 60px;
-    stroke-width: 1.2;
-    top: calc(50% + 2px);
-    transform: translateY(-50%);
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
 }
 
 .js-loading {
@@ -293,62 +155,16 @@ h2.section-title {
     /* width: 100px; */
 }
 
-.postwar-logo-min-width-912 {
+/* .postwar-logo-min-width-912 {
     background: none;
     display: none;
     height: 100px;
     margin: 0 auto;
     width: 200px;
-}
+} */
 
 .no-uppercase {
     text-transform: none;
-}
-
-.search-bar {
-    background: #f2f2f2;
-    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
-    display: none;
-    left: 0;
-    margin: 0 auto;
-    padding-top: 15px;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 1000;
-}
-
-.search-bar input {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #6b6b6b;
-    color: #6b6b6b;
-    display: none;
-    font-family: Raleway, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0 20px 20px 20px;
-    outline: 0;
-    padding: 10px 20px 5px 10px;
-    width: calc(100% - 40px);
-}
-
-.search-bar .icon-search-confirm {
-    bottom: 10px;
-    cursor: pointer;
-    display: none;
-    position: absolute;
-    right: 30px;
-    stroke-width: 1.2;
-    top: 55%;
-    transform: translateY(-80%);
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-}
-
-.search-input::placeholder {
-    color: #6b6b6b;
-    display: none;
-    letter-spacing: 0.05em;
 }
 
 @font-face {
@@ -409,3 +225,5 @@ h2.section-title {
     }
 
 }
+
+/* move table to archive Available Inventory, ---services:upholstery, refinishing, repairs, preservation work -- about us */ 
