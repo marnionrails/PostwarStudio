@@ -50,6 +50,14 @@ body, html {
     width: 100%;
 }
 
+.available-inventory {
+    margin-top: 5%;
+    min-height: 320px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
 .button-max-width-911 {
     align-items: center;
     background: #f5ecec;
@@ -218,10 +226,10 @@ h2.section-title {
     }
 
     .archive-image img {
-        height: 160px;
+        height: 200px;
     }
     .archive-image figcaption {
-        font-size: 12px !important;
+        font-size: 15px !important;
     }
 
 }
